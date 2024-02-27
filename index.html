@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+    Costruire il gioco del tris:
+    la pagina web deve contenere 9 caselle (suggerisco l'uso di 9 bottoni)
+    al click sul bottone se il bottone ha valore 0, quindi è libero, allora viene occupato
+    dal giocatore (dovremo tener conto di chi sta giocando, usando una variabile), altrimenti
+    il click viene ignorato se il click è almeno il sesto, allora bisogna valutare se c'è vittoria
+    o pareggio, per farlo cercare nell'elenco dei bottoni e cercare una possibile combinazione di
+    vittoria, individuando chi è il vincitore (consiglio che ad ogni mossa venga aggiunto il valore
+    1 o 2, in base a chi sta giocando, al bottone cliccato), se non ci c'è vincitore, la partita continua
+    altrimenti aprire un pop-up e resettare il gioco (suggerisco che i bottoni abbiano come etichetta - se
+    sono liberi, X per il primo giocatore, O per il secondo) se sono state fatte 9 mosse e non si
+    ha un vincitore dopo la nona mossa, allora la partita è pari, comunicarlo con un pop-up e resettare il gioco
+
+    istruzione per impostare il valore di un bottone:
+    <button val="0"> - </button>
+-->
+<html>
+    <head>
+        <title>Jofce's Tris</title>
+        <link rel="webpage icon" href="./icon.png">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body onload="starting()">
+        <h1 id="game_header" onclick="location.reload();">Jofce's Tris</h1>
+        <p id="message_panel">indefinito</p>
+        <table id="gameboard"></table>
+        <script type="text/javascript" src="./script.js"></script>
+    </body>
+</html>
